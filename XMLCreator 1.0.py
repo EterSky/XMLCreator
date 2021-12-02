@@ -21,7 +21,7 @@ def ask(question, default="yes"):
         else:
             sys.stdout.write("Please respond with 'yes' or 'no' " "(or 'y' or 'n').\n")
 
-xmlName=str(input("Name your xml file (.xml will be automatically added to the file name"))
+xmlName=str(input("Name your xml file (.xml will be automatically added to the file name)"))
 f=open(xmlName+".xml", "w")
 
 sectionName=str(input("What is your mod name ? (Short name) [Section name]"))
