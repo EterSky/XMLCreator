@@ -2,7 +2,7 @@
 A python program that builds a SMG2 XML file for you
 
 ## Notes
-XMLCreator will make the XMLs in the same folder as the .py file
+XMLCreator will make the XMLs in the same folder as the .py file\n
 Please open an issue if you find any problem
 
 ## Changelog
