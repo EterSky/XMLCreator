@@ -1,0 +1,5 @@
+Note 1: XMLCreator will make the XMLs in the same folder as the .py file
+
+Note 2: Thanks to TheSunCat for making the Yes/No questions "more forgiving"
+
+Note 3: Please make an issue on github if you find any problem
