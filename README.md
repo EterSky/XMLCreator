@@ -11,7 +11,7 @@ Feel free to fork the github repo and make XMLCreator compatible with other game
 There is a limit of memory patches but I doubt you'll reach 250 of them
 
 ## Changelog
-Slight code optimization and added memory patches support
+Added memory patches support
 
 ## Thanks to
 TheSunCat for making the Yes/No questions "more forgiving"
