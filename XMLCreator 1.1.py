@@ -1,6 +1,6 @@
 import sys
 
-def ask(question, default="yes"):
+def ask(question, default="yes"): ##Thanks to TheSunCat for this function
     valid = {"yes": True, "y": True, "ye": True, "no": False, "n": False}
     if default is None:
         prompt = " [y/n] "
@@ -39,6 +39,11 @@ choiceName=str(input("What will be shown when the mod is enabled ? [Choice name]
 folderName=str(input("What is your mod's folder name ? (For example \"smgtest\")"))
 
 saveGame="Yes"
+memoryPatchesCounter=-1
+endMemoryPatches=0
+memoryPatchesChange=0
+memoryPatchesList=[0]*250
+memoryPatchXmlStr=""
 noDoubles=0
 projectTemplate=""
 localizeData=""
@@ -63,6 +68,18 @@ if gameNumber==2:
     projectTemplate=ask("Does your mod use Project Template ? (If yes, will automatically enable SystemData and ParticleData)")
 if gameNumber==1:
     movieData=ask("Does your mod use MovieData ?")
+askMemoryPatches=ask("Do you want to use memory patches ?")
+if askMemoryPatches==True:
+    while endMemoryPatches==0: ## I think I overcomplicated that
+        memoryPatches=str(input("Type in your memory offset and its value separated by a \";\" or type \"end\" if you're finishing entering your memory patches"))
+        if memoryPatches=="end":
+            endMemoryPatches=1
+        else:
+            memoryPatchesCounter+=1
+            memoryPatchesList[memoryPatchesCounter]=memoryPatches
+    memoryPatchesCounter=249-memoryPatchesCounter
+    for i in range(memoryPatchesCounter):
+        memoryPatchesList.remove(0)
 
 if gameNumber==1:
     f.write("<!-- XML created by XMLCreator -->\n<!-- Get XMLCreator at https://github.com/EterSky/XMLCreator/releases -->\n<wiidisc version=\"1\">\n    <id game=\"RMG\"/>\n       <region type=\"E\"/>\n       <region type=\"J\"/>\n       <region type=\"P\"/>\n       <region type=\"W\"/>\n       <region type=\"K\"/>\n    <options>\n")
@@ -106,6 +123,19 @@ if projectTemplate:
     f.write("        <folder external=\"CustomCode\" disc=\"/CustomCode\" create=\"true\"/>\n        <memory offset=\"0x804B7D38\" value=\"4BB4A4D0\"/>\n        <memory offset=\"0x804B7D38\" value=\"4BB4A240\" original=\"4E800020\" target=\"E\"/>\n        <memory offset=\"0x804B7D38\" value=\"4BB4A240\" original=\"4E800020\" target=\"J\"/>\n        <memory offset=\"0x804B7D38\" value=\"4BB4A240\" original=\"4E800020\" target=\"P\"/>\n        <memory offset=\"0x804B7DA8\" value=\"4BB4A1D0\" original=\"4E800020\" target=\"K\"/>\n        <memory offset=\"0x804B7DA8\" value=\"4BB4A1D0\" original=\"4E800020\" target=\"W\"/>\n        <memory offset=\"0x80001800\" valuefile=\"CustomCode/Loader{$__region}.bin\"/>\n")
 if movieData:
     f.write("        <folder external=\"MovieData\" disc=\"/MovieData\" create=\"true\"/>\n")
+if askMemoryPatches:
+    f=open(xmlName+".xml", "a")
+    for i in range(len(memoryPatchesList)):
+        f.write("        <memory offset=\"")
+        patch=memoryPatchesList[i]
+        c=0
+        for offsetValue in patch.split(";"):
+            f.write(offsetValue)
+            if c==0:
+                f.write("\" value=\"")
+            else:
+                f.write("\"/>\n")
+            c=1
 f.write("    </patch>\n</wiidisc>")
 
 f.close()
