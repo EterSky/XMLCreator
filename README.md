@@ -15,4 +15,5 @@ Added memory patches support
 
 ## Thanks to
 TheSunCat for making the Yes/No questions "more forgiving"
+
 Lord-Giganticus for helping me with a part of the memory patch code
