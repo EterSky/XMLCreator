@@ -82,7 +82,7 @@ if askMemoryPatches==True:
         memoryPatchesList.remove(0)
 
 if gameNumber==1:
-    f.write("<!-- XML created by XMLCreator -->\n<!-- Get XMLCreator at https://github.com/EterSky/XMLCreator/releases -->\n<wiidisc version=\"1\">\n    <id game=\"RMG\"/>\n       <region type=\"E\"/>\n       <region type=\"J\"/>\n       <region type=\"P\"/>\n       <region type=\"W\"/>\n       <region type=\"K\"/>\n    <options>\n")
+    f.write("<!-- XML created by XMLCreator -->\n<!-- Get XMLCreator at https://github.com/EterSky/XMLCreator/releases -->\n<wiidisc version=\"1\">\n    <id game=\"RMG\"/>\n       <region type=\"E\"/>\n       <region type=\"J\"/>\n       <region type=\"P\"/>\n       <region type=\"K\"/>\n    <options>\n")
 elif gameNumber==2:
     f.write("<!-- XML created by XMLCreator -->\n<!-- Get XMLCreator at https://github.com/EterSky/XMLCreator/releases -->\n<wiidisc version=\"1\">\n    <id game=\"SB4\"/>\n       <region type=\"E\"/>\n       <region type=\"J\"/>\n       <region type=\"P\"/>\n       <region type=\"W\"/>\n       <region type=\"K\"/>\n    <options>\n")
 f.write("       <section name=\""+sectionName+"\">\n")
