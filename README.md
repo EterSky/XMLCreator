@@ -14,6 +14,5 @@ There is a limit of memory patches but I doubt you'll reach 250 of them
 Added memory patches support
 
 ## Thanks to
-TheSunCat for making the Yes/No questions "more forgiving"
-
+TheSunCat for making the Yes/No questions "more forgiving" <br/>
 Lord-Giganticus for helping me with a part of the memory patch code
