@@ -29,6 +29,6 @@ Adding riivolution patches
 GLE option
 
 ## Thanks to
-Thanks to TheSunCat for making the Yes/No questions "more forgiving" in versions below 2.0
+TheSunCat for making the Yes/No questions "more forgiving" in versions below 2.0
 
 Lord-Giganticus for helping me with a part of the memory patch code
