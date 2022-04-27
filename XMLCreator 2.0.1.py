@@ -212,10 +212,10 @@ def generate():
     if varMovie.get()==1:
         f.write("        <folder external=\"MovieData\" disc=\"/MovieData\" create=\"true\"/>\n")
     if varCrash.get()==1 and gameNumber==1:
-        f.write("        <memory offset=\"0x8039AA2C\" value=\"60000000\" original=\"98040068\"/>\n        <memory offset=\"0x8039AAF0\" value=\"60000000\" original=\"4082FFB8\"/>\n        <memory offset=\"0x804A432C\" value=\"60000000\" original=\"48000160\"/>\n") # American (E)
-        f.write("        <memory offset=\"0x8039AA48\" value=\"60000000\" original=\"98040068\"/>\n        <memory offset=\"0x8039AB0C\" value=\"60000000\" original=\"4082FFB8\"/>\n        <memory offset=\"0x804A432C\" value=\"60000000\" original=\"48000160\"/>\n") # European/Australian (P)
-        f.write("        <memory offset=\"0x8039AA2C\" value=\"60000000\" original=\"98040068\"/>\n        <memory offset=\"0x8039AAF0\" value=\"60000000\" original=\"4082FFB8\"/>\n        <memory offset=\"0x804A430C\" value=\"60000000\" original=\"48000160\"/>\n") # Japanese (J)
-        f.write("        <memory offset=\"0x8039BF80\" value=\"60000000\" original=\"98040068\"/>\n        <memory offset=\"0x8039C044\" value=\"60000000\" original=\"4082FFB8\"/>\n        <memory offset=\"0x804A656C\" value=\"60000000\" original=\"48000160\"/>\n") # Korean (K)
+        f.write("        <memory offset=\"0x8039AA2C\" value=\"60000000\" original=\"98040068\" target=\"E\"/>\n        <memory offset=\"0x8039AAF0\" value=\"60000000\" original=\"4082FFB8\" target=\"E\"/>\n        <memory offset=\"0x804A432C\" value=\"60000000\" original=\"48000160\" target=\"E\"/>\n") # American (E)
+        f.write("        <memory offset=\"0x8039AA48\" value=\"60000000\" original=\"98040068\" target=\"P\"/>\n        <memory offset=\"0x8039AB0C\" value=\"60000000\" original=\"4082FFB8\" target=\"P\"/>\n        <memory offset=\"0x804A432C\" value=\"60000000\" original=\"48000160\" target=\"P\"/>\n") # European/Australian (P)
+        f.write("        <memory offset=\"0x8039AA2C\" value=\"60000000\" original=\"98040068\" target=\"J\"/>\n        <memory offset=\"0x8039AAF0\" value=\"60000000\" original=\"4082FFB8\" target=\"J\"/>\n        <memory offset=\"0x804A430C\" value=\"60000000\" original=\"48000160\" target=\"J\"/>\n") # Japanese (J)
+        f.write("        <memory offset=\"0x8039BF80\" value=\"60000000\" original=\"98040068\" target=\"K\"/>\n        <memory offset=\"0x8039C044\" value=\"60000000\" original=\"4082FFB8\" target=\"K\"/>\n        <memory offset=\"0x804A656C\" value=\"60000000\" original=\"48000160\" target=\"K\"/>\n") # Korean (K)
     if varCrash.get()==1 and gameNumber==2 and varPT.get()==0:
         f.write("        <memory offset=\"0x804B7D90\" value=\"60000000\"/>\n        <memory offset=\"0x804B7E54\" value=\"60000000\"/>\n        <memory offset=\"0x805B66B4\" value=\"60000000\"/>\n")
     if varPatches.get()==1:
