@@ -10,9 +10,25 @@ Feel free to fork the github repo and make XMLCreator compatible with other game
 
 There is a limit of memory patches but I doubt you'll reach 250 of them
 
+Speaking of memory patches, once you enter "end", you won't be able to type in the entry box due to their complexity (was a pain to code lmfao I had to rewrite it all)
+
+I'm looking to optimize my code so I'd be glad to read some pull requests
+
+The "Project Template" option takes priority over the "Crash Debugger" option
+
 ## Changelog
-Added memory patches support
+Added a GUI
+
+Added a "Crash debugger" option
+
+## Upcoming content
+Dark theme
+
+Adding riivolution patches
+
+GLE option
 
 ## Thanks to
-TheSunCat for making the Yes/No questions "more forgiving"
+Thanks to TheSunCat for making the Yes/No questions "more forgiving" in versions below 2.0
+
 Lord-Giganticus for helping me with a part of the memory patch code
