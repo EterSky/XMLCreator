@@ -17,7 +17,7 @@ endMemoryPatches=0
 memoryPatchesList=[0]*250
 ripPatches=0 # Screw this
 noDoubles=0
-lang=["EuFrench","EuSpanish","EuItalian","EuDutch","EuGerman","UsFrench","UsSpanish","UsEnglish","JpJapanese"]
+lang=["EuEnglish","EuFrench","EuSpanish","EuItalian","EuDutch","EuGerman","UsFrench","UsSpanish","UsEnglish","JpJapanese"]
 
 ### Functions ###
 
@@ -202,10 +202,10 @@ def generate():
         f.write("        <folder external=\"SystemData\" disc=\"/SystemData\" create=\"true\"/>\n")
     if varLocalize.get()==1:
         f.write("        <folder external=\"LocalizeData\" disc=\"/LocalizeData\" create=\"true\"/>\n")
-        for langNbSMG2 in range(9):
+        for langNbSMG2 in range(10):
             f.write("        <folder external=\"LocalizeData/EuEnglish\" disc=\"/LocalizeData/"+lang[langNbSMG2]+"\" create=\"true\" />\n")
     if varSMG1text.get()==1:
-        for langNbSMG1 in range(9):
+        for langNbSMG1 in range(10):
             f.write("        <folder external=\"EuEnglish\" disc=\"/"+lang[langNbSMG1]+"\" create=\"true\" />\n")
     if varPT.get()==1:
         f.write("        <folder external=\"CustomCode\" disc=\"/CustomCode\" create=\"true\"/>\n        <memory offset=\"0x804B7D38\" value=\"4BB4A4D0\"/>\n        <memory offset=\"0x804B7D38\" value=\"4BB4A240\" original=\"4E800020\" target=\"E\"/>\n        <memory offset=\"0x804B7D38\" value=\"4BB4A240\" original=\"4E800020\" target=\"J\"/>\n        <memory offset=\"0x804B7D38\" value=\"4BB4A240\" original=\"4E800020\" target=\"P\"/>\n        <memory offset=\"0x804B7DA8\" value=\"4BB4A1D0\" original=\"4E800020\" target=\"K\"/>\n        <memory offset=\"0x804B7DA8\" value=\"4BB4A1D0\" original=\"4E800020\" target=\"W\"/>\n        <memory offset=\"0x80001800\" valuefile=\"CustomCode/Loader{$__region}.bin\"/>\n")
@@ -240,7 +240,7 @@ def generate():
 ### Program ###
 
 gui=Tk()
-gui.title("XMLCreator 2.0")
+gui.title("XMLCreator 2.0.2")
 ##gui.configure(bg="black") (that's for 2.1)
 
 xmlNameText=Label(gui,text="Name your xml file (.xml will be automatically added to the file name)",fg="red")
