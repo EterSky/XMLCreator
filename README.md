@@ -21,6 +21,8 @@ Added a GUI
 
 Added a "Crash debugger" option
 
+Fixed the EuEnglish line being completely absent because i'm so dumb
+
 ## Upcoming content
 Dark theme
 
