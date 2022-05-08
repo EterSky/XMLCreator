@@ -28,7 +28,7 @@ Dark theme
 
 Adding riivolution patches
 
-Test
+UsEnglish option
 
 GLE option
 
