@@ -28,6 +28,8 @@ Dark theme
 
 Adding riivolution patches
 
+UsEnglish option
+
 GLE option
 
 ## Thanks to
